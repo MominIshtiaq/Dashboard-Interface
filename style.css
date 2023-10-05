@@ -83,14 +83,14 @@
   background: #fff;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 70px 1fr;
   width: 100%;
 }
 
 .logo_info .row_1 {
   display: flex;
   justify-content: space-between;
-  padding: 10px 3rem;
+  padding: 1rem 3rem;
 }
 
 .row_1 .search {
@@ -177,4 +177,88 @@
   grid-column: 2 / 3;
   grid-row: 2/3;
   background: #cffafe;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+
+.main_info_show .projects {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  padding: 0.5rem 1rem;
+}
+
+.main_info_show .projects h3 {
+  margin-bottom: 10px;
+}
+
+.main_info_show .projects .projects_list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px 15px;
+}
+
+.main_info_show .projects .projects_list .project_card {
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.main_info_show .projects .projects_list .project_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #99f6e4;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.main_info_show .projects .projects_list .project_card:hover::before {
+  width: 100%;
+}
+
+.main_info_show .projects .projects_list .project_card h3 {
+  font-size: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.main_info_show .projects .projects_list .project_card p {
+  font-size: 15px;
+  position: relative;
+  z-index: 3;
+}
+
+.main_info_show .projects .projects_list .project_card .icon {
+  text-align: right;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+  z-index: 3;
+}
+
+.main_info_show .announcements {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background: red;
+}
+
+.main_info_show .trending {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background: lime;
 }
