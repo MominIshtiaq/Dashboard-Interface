@@ -82,6 +82,95 @@
   grid-row: 1/2;
   background: #fff;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+}
+
+.logo_info .row_1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 3rem;
+}
+
+.row_1 .search {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  gap: 1rem;
+}
+
+.row_1 .search i {
+  font-size: 1.5rem;
+}
+
+.row_1 .search input {
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  padding: 5px 5px;
+  background: #cffafe;
+}
+
+.logo_info .row_1 .notify_user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo_info .row_1 .notify_user i {
+  font-size: 1.5rem;
+}
+
+.logo_info .row_1 .notify_user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.logo_info .row_2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
+.logo_info .row_2 .user_info {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo_info .row_2 .btns {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo_info .row_2 .btns button {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: #99f6e4;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.logo_info .row_2 .btns button:hover {
+  border: 2px solid #99f6e4;
+  background: transparent;
+  color: #99f6e4;
+}
+
+.logo_info .row_2 .user_info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .main_info_show {
